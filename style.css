@@ -229,7 +229,7 @@ body::before {
 .blanks-link{
     width: 474.66px;
     height: 474.66px;
-    background-image: url("/imags/Mobile_banner_1_x800.webp");
+    background-image: url("imags/Mobile_banner_1_x800.webp");
     background-size: cover;
     background-position: center;
 }
