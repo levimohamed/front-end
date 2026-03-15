@@ -34,7 +34,7 @@ nav{
 }
 @font-face {
     font-family: "intelClear";
-    src: url("/intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
+    src: url("intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
 }
 ul{
     list-style: none;
@@ -71,7 +71,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 700px; /* حدد الارتفاع اللي تبغيه */
-    background-image: url('/imags/Desktop_banner_1_1200x.jpg');
+    background-image: url('imags/Desktop_banner_1_1200x.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
