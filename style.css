@@ -1,68 +1,8 @@
+/* body and html ================================= */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-header {
-    position: absolute;
-    width: 100%;
-    height: 109.89;
-    z-index: 10;
-}
-
-header:hover{
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-}
-.logo_navigation{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-.logo{
-    width: 70px;
-    height: auto;
-}
-.logo_search{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-}
-.logo_search>input{
-    width: 300px;
-    border-radius: 20px;
-    height: 30px;
-}
-@font-face {
-    font-family: "intelClear";
-    src: url("intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
-}
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
-    font-family: "intel", monospace;
-}
-nav ul {
-    flex: 1;
-}
-nav ul:last-child {
-    justify-content: flex-end;
 }
 body {
     position: relative;
@@ -80,8 +20,107 @@ body::before {
     background-position: center;
     z-index: -1;
 }
+/* ============================================= */
+/* header and nav bar and logo ================= */
+header {
+    position: sticky;
+    width: 100%;
+    height: 109.89;
+    top: 0;
+    z-index: 10;
+    background: transparent;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+header:hover{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+header.scrolled {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 109.89px;
+    padding: 0;
+    margin: 0;
+}
+.logo_and_navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; 
+}
+.logo{
+    width: 70px;
+    height: auto;
+}
+.logo_and_search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.logo_and_search>input{
+    width: 340px;
+    border-radius: 3px;
+    height: 33.8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    line-height: normal;
+}
+.logo_and_search>input:focus{
+    outline: none;
+}
+.logo_and_search>input::placeholder{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    left :10px;
+}
+.icons_and_text{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+@font-face {
+    font-family: "intelClear";
+    src: url("intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+nav ul {
+    flex: 1;
+}
+nav ul:last-child {
+    justify-content: flex-end;
+}
+/* ============================================ */
+/* first two section container ================ */
+.sections_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/* ============================================ */
+/* section1 (two guys) ======================== */
 .section1 {
-    height: 700px;
+    height: calc(700px - 109.89px); /* = ~590px */
     display: flex;
     align-items: flex-end;
     padding-bottom: 80px;
@@ -90,6 +129,7 @@ body::before {
     z-index: 1;
     margin-top: 0; /* تأكد ما فيه margin */
 }
+/* pictur link ============================== */
 .section1-link {
     position: absolute;
     top: 0;
@@ -98,26 +138,29 @@ body::before {
     height: 100%;
     z-index: 0;
 }
-.shop_title_btn {
+/* ===========================================*/
+/* title and link for shop now ===============*/
+.container_shop {
     position: relative;
     z-index: 2; /* فوق الـ link */
     width: 100%;
 }
-.shop_title_link {
+.container_shop_link {
     text-decoration: none;
     color: inherit;
 }
-.container_shop{
+.shop_title_and_btn{
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 400px;
 }
-.shop_title_btn h1{
+.container_shop h1{
     color: white;
     font-size: 3rem;
 }
 .shop_btn{
+    display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border: 1px solid white;
@@ -126,13 +169,13 @@ body::before {
     cursor: pointer;
     text-decoration: none;
 }
-.shop_title_btn h1, .shop_title_btn a{
+.container_shop h1, .container_shop .container_shop_link {
     opacity: 0;
     transform: translateY(100px);
     animation: slideUp 1s ease forwards;
 }
 
-.shop_title_btn a {
+.container_shop .container_shop_link{
     animation-delay: 0.4s;
 }
 
@@ -142,6 +185,8 @@ body::before {
         transform: translateY(0);
     }
 }
+/* =========================================== */
+/* pop up ==================================== */
 .subscribe_review_container{
     display: flex;
     flex-direction: column;
@@ -202,11 +247,7 @@ body::before {
     justify-content: center;
     align-items: end;
 }
-.section_container{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
+
 .section2{
     display: flex;
     flex-direction: row;

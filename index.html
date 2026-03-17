@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg sticky-top">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <div class="logo_navigation">
+                <div class="logo_and_navigation">
                     <!--Logo-->
-                    <div class="logo_search">
+                    <div class="logo_and_search">
                         <a class="navbar-brand mx-auto" href="">
                             <img class="logo"
                                 src="imags/hours-logo-july22_8af1c18e-780b-4177-834f-4596b1edbda5_small@2x.png"
                                 alt="logo">
                         </a>
-                        <input type="search" name="search" id="search" class="form-control" placeholder="Search">
+                        <input type="search" name="search" id="search" class="search" placeholder="Search">
                     </div>
                     <!--navigation links-->
                     <ul class="navbar-nav me-auto">
@@ -30,28 +29,38 @@
                         <li class="nav-item"><a href="" class="nav-link text-light">VIP Program</a></li>
                     </ul>
                 </div>
-                <div class="icons_text d-flex align-items-center">
+                <div class="icons_and_text mb-3">
                     <div class="free_shipping_text text-center text-white bg-black py-1">
                         <p class="mb-0 px-1">Free Shipping over 75$US | No Duties to US+CA</p>
                     </div>
                     <!--Icons-->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="" class="nav-link text-light">icon</a></li>
-                        <li class="nav-item"><a href="" class="nav-link text-light">icon</a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-light"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                    class="bi bi-person" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                </svg></a></li>
+                        <li class="nav-item"><a href="" class="nav-link text-light"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor"
+                                    class="bi bi-cart3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                </svg></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="section_container">
+        <section class="sections_container">
             <section class="section1">
                 <a href="" class="section1-link"></a>
-                <div class="shop_title_btn">
-                    <a href="your-link.com" class="shop_title_link">
-                        <div class="container_shop">
+                <div class="container_shop">
+                    <a href="your-link.com" class="container_shop_link">
+                        <div class="shop_title_and_btn">
                             <h1>Your go-to quality basics</h1>
-                            <button class="shop_btn">Shop Now</button>
+                            <span class="shop_btn">Shop Now</span>
                         </div>
                     </a>
                 </div>
@@ -93,7 +102,13 @@
                 </a>
             </section>
         </section>
-        section.trend_products
+        <section class="trend_products">
+            <div>
+                <h1>Trending Products</h1>
+                <h4><a href="">View Collection</a></h4>
+            </div>
+        </section>
     </main>
 </body>
+
 </html>
