@@ -1,0 +1,123 @@
+/* ================================= */
+/* Trending Products Cards ========= */
+/* ================================= */
+.trend_products_shop {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.trend_products_shop::-webkit-scrollbar {
+    display: none;
+}
+
+.new_arrivals_shop::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    cursor: pointer;
+}
+
+.product-info {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.stars {
+    color: black;
+    font-size: 14px;
+}
+
+.reviews-count {
+    font-size: 13px;
+    color: #555;
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.product-color {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Hover Effect =================== */
+.product-img-container {
+    position: relative;
+    overflow: hidden;
+    width: 280px;
+    height: 320px;
+}
+
+.img-main, .img-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+}
+
+.img-hover {
+    opacity: 0;
+}
+
+.product-card:hover .img-hover {
+    opacity: 1;
+}
+
+.product-card:hover .img-main {
+    opacity: 0;
+}
+
+/* Sizes ========================== */
+.product-sizes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.product-card:hover .product-sizes {
+    opacity: 1;
+}
+
+.product-sizes span {
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.product-sizes span:hover {
+    text-decoration: underline;
+}

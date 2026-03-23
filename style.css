@@ -15,7 +15,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 700px;
-    background-image: url('imags/Desktop_banner_1_1200x.jpg');
+    background-image: url('images/Desktop_banner_1_1200x.jpg');
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -25,7 +25,7 @@ body::before {
 header {
     position: sticky;
     width: 100%;
-    height: 109.89;
+    height: 109.89px;
     top: 0;
     z-index: 10;
     background: transparent;
@@ -75,6 +75,7 @@ nav{
     -webkit-backdrop-filter: blur(10px);
     border: none;
     line-height: normal;
+    padding: 0 10px;
 }
 .logo_and_search>input:focus{
     outline: none;
@@ -82,8 +83,6 @@ nav{
 .logo_and_search>input::placeholder{
     font-size: 15px;
     color: white;
-    position: absolute;
-    left :10px;
 }
 .icons_and_text{
     display: flex;
@@ -92,6 +91,12 @@ nav{
     align-items: center;
     gap: 20px;
 }
+/* .icon_link1{
+    display: block;
+    background-image: url("icons/bag-fill.svg");
+    background-size: 23px;
+    background-repeat: no-repeat;
+} */
 @font-face {
     font-family: "intelClear";
     src: url("intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
@@ -256,21 +261,21 @@ nav ul:last-child {
 .signature-link{
     width: 474.66px;
     height: 474.66px;
-    background-image: url("imags/Mobile_banner3_-_Jan.webp");
+    background-image: url("images/Mobile_banner3_-_Jan.webp");
     background-size: cover;
     background-position: center;
 }
 .graphics-link{
     width: 474.66px;
     height: 474.66px;
-    background-image: url("imags/Mobile_banner2_-_Jan-1.jpg");
+    background-image: url("images/Mobile_banner2_-_Jan-1.jpg");
     background-size: cover;
     background-position: center;
 }
 .blanks-link{
     width: 474.66px;
     height: 474.66px;
-    background-image: url("imags/Mobile_banner_1_x800.webp");
+    background-image: url("images/Mobile_banner_1_x800.webp");
     background-size: cover;
     background-position: center;
 }
@@ -278,4 +283,332 @@ nav ul:last-child {
     height: 474.66px;
     display: flex;
     align-items: end;
+}
+/* ================================= */
+/* ============== trending prodacts  */
+.trend_products_title_and_link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 88.19px;
+}
+.trend_products_shop{
+    width: 100%;
+    height: 494.97px;
+}
+/* Scroll Buttons ================== */
+.trend_products_wrapper {
+    position: relative;
+}
+
+.scroll_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: white;
+    border: 1px solid #ddd;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.left_btn {
+    left: 5px;
+}
+
+.right_btn {
+    right: 5px;
+}
+.trend_products_wrapper:hover .scroll_btn {
+    opacity: 1;
+}
+/* ================================== */
+ .signature_collection_section {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-image: url("images/Desktop_banner_1_1200x.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.container-link_signature_collection {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.signature_title_and_btn {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.signature_title_and_btn h1 {
+    color: white;
+    font-size: 3rem;
+}
+.signature_btn {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 12px 24px;
+    width: fit-content;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* .container-link_signature_collection h1,
+.container-link_signature_collection .signature_title_and_btn {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 1s ease forwards;
+}
+.container-link_signature_collection .signature_title_and_btn {
+    animation-delay: 0.4s;
+} */
+
+/* وضع هذا بدلاً منه */
+.container-link_signature_collection h1,
+.container-link_signature_collection .signature_btn {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideUp 1s ease forwards;
+}
+
+.container-link_signature_collection .signature_btn {
+    animation-delay: 0.4s;
+}
+.new_arrivals_title_and_link{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 88.19px;
+}
+/* ================================= */
+/* New Arrivals Cards ============== */
+/* ================================= */
+.new_arrivals_wrapper {
+    position: relative;
+}
+
+.new_arrivals_shop {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.new_arrivals_shop::-webkit-scrollbar {
+    display: none;
+}
+
+.new_arrivals_wrapper:hover .scroll_btn {
+    opacity: 1;
+}
+.new_left_btn {
+    left: 5px;
+}
+
+.new_right_btn {
+    right: 5px;
+}
+/* ===================================== */
+/* ================================= */
+/* Community Reviews =============== */
+/* ================================= */
+.community_opinions {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.community_wrapper {
+    position: relative;
+}
+
+.community_reviews_content {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.community_reviews_content::-webkit-scrollbar {
+    display: none;
+}
+
+.community_wrapper:hover .scroll_btn {
+    opacity: 1;
+}
+
+.community_left_btn {
+    left: 5px;
+}
+
+.community_right_btn {
+    right: 5px;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 280px;
+    cursor: pointer;
+}
+
+.review-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background-color: #f5f5f5;
+}
+
+.review-info {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.review-stars {
+    color: black;
+    font-size: 14px;
+}
+
+.review-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.review-text {
+    font-size: 13px;
+    color: #555;
+    margin: 0;
+}
+
+.review-name {
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0;
+}
+/* ====================================== */
+.foor-pics {
+    width: 100%;
+}
+.pic_container {
+    width: 24.7%;
+    height: 474.66px;
+    background-image: url("images/Mobile_banner3_-_Jan.webp");
+    background-size: cover;
+    background-position: center;
+}
+footer{
+    background-color:#212121;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.section1_footer a{
+    color: white;
+    text-decoration: none;
+}
+.section1_footer .hours_sing_up a{
+    color: white;
+    text-decoration: underline;
+}
+.section1_footer a:hover{
+    text-decoration: underline;
+}
+.section1_footer {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    width: 100%;
+    height: 300px;
+    margin-top: 80px;
+    padding-left: 25px; /* ← padding بدل margin */
+}
+.customer_care, .quick_links, .follow_us{
+    display: flex;
+    flex-direction: column;
+}
+.privacy_policy_paragraph{
+    font-size: small;
+}
+.links_titles{
+    font-size: small;
+}
+.customer_care,.quick_links,.follow_us{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.follow_us svg{
+    width: 14px;
+}
+.follow_us a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.footer_input_submit{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+#email_input_footer{
+    width: 319px;
+    height: 48px;
+    border-radius: 8px;
+    color: white;
+    background-color: #FFFFFF33;
+    border: none;
+    padding: 0 10px;
+}
+#email_input_footer:focus{
+    outline: none;
+}
+#email_input_footer::placeholder{
+    color: white;
+}
+#email_submit_footer{
+    width: 115px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+}
+.section2_footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.copy_right{
+    padding: 30px;
+    font-size: 15px;
+}
+.terms_and_policy{
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.terms_and_policy a{
+    color: white;
 }
