@@ -308,10 +308,12 @@ nav ul:last-child {
     flex-direction: row;
     gap: 0.4%;
 }
-:root{
+
+:root {
     --signature-graphics-blanks-height: 35vw;
     --big-pics-height: 51.47vw;
 }
+
 .signature-link {
     width: 33.2%;
     height: var(--signature-graphics-blanks-height);
@@ -783,9 +785,68 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    #li3{
+    :root {
+        --big-pics-height-for-sm-screen: 103vw;
+        --shop-btn-height-for-sm-screen: 8vw;
+        --shop-btn-width-for-sm-screen: 23vw;
+        --signature-graphics-blanks-height-for-sm-screen: 35vw;
+    }
+
+    header {
+        height: 15vw;
+    }
+    .section1 {
+        height: 86.76vw;
+        padding-bottom: 0;
+        padding-left: 20px;
+    }
+    .go-to-quality-title {
+        font-size: 6vw !important;
+    }
+    .shop_btn {
+        display: flex;
+        align-items: center;
+        font-size: 2.8vw;
+        height: var(--shop-btn-height-for-sm-screen);
+        width: var(--shop-btn-width-for-sm-screen);
+    }
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--big-pics-height-for-sm-screen);
+        background-image: url('images/Mobile_banner_1_x800.webp');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
+    .div_image h2{
+        /* height: var(--signature-graphics-blanks-height-for-sm-screen); */
+        font-size: 3.7vw;
+    }
+    .section2{
+        margin-top: 6px;
+    }
+    .signature_collection_section{
+        background-image: url('images/Mobile_banner_1_x800.webp');
+        height: var(--big-pics-height-for-sm-screen);
+    }
+    .signature_title_and_btn h1{
+        font-size: 6vw;
+    }
+    .signature_title_and_btn .signature_btn {
+        font-size: 2.8vw;
+        display: flex;
+        align-items: center;
+        height: var(--shop-btn-height-for-sm-screen);
+        width: var(--shop-btn-width-for-sm-screen);
+    }
+    #li3 {
         display: block;
     }
+
     footer {
         height: 1350px;
         display: flex;
