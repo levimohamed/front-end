@@ -136,6 +136,9 @@ nav ul:last-child {
     justify-content: flex-end;
 }
 
+.search-icon {
+    display: none;
+}
 /* ============================================ */
 /* first two section container ================ */
 .sections_container {
@@ -795,6 +798,32 @@ footer {
     header {
         height: 15vw;
     }
+    nav{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .search-icon {
+        display: block;
+    }
+
+    .logo_and_navigation{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+    .logo {
+        margin: 0;
+        width: 15vw;
+        height: 2.7vw;
+        background-image: url(images/hours-logo-july22_8af1c18e-780b-4177-834f-4596b1edbda5_small@2x.png);
+        background-size: 15vw;
+        background-repeat: no-repeat;
+    }
     .section1 {
         height: 86.76vw;
         padding-bottom: 0;
@@ -843,10 +872,6 @@ footer {
         height: var(--shop-btn-height-for-sm-screen);
         width: var(--shop-btn-width-for-sm-screen);
     }
-    #li3 {
-        display: block;
-    }
-
     footer {
         height: 1350px;
         display: flex;
