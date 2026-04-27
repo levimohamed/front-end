@@ -4,7 +4,7 @@
 .trend_products_shop {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 0.75%;
     padding: 10px 0;
     overflow-x: auto;
     scrollbar-width: none;
@@ -19,17 +19,19 @@
 }
 
 .product-card {
-    border-radius: 30px;
+    border-radius: 8px;
     text-decoration: none;
     color: black;
     display: flex;
     flex-direction: column;
-    min-width: 280px;
+    width: 23.5vw;
     cursor: pointer;
+    margin-left: 10px;
+    border: 0.5px solid #8b95c483;
 }
 
 .product-info {
-    padding: 10px 0;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 3px;
@@ -67,8 +69,10 @@
 .product-img-container {
     position: relative;
     overflow: hidden;
-    width: 280px;
-    height: 320px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: 23.4vw;
+    border-radius: 8px 8px 0 0;
 }
 
 .img-main, .img-hover {
@@ -121,4 +125,20 @@
 
 .product-sizes span:hover {
     text-decoration: underline;
+}
+@media screen and (min-width:700px) and (max-width:1100px) {
+    
+}
+@media screen and (max-width: 768px) {
+    .trend_products_shop {
+        gap: 5px;
+    }
+    .product-img-container{
+        width: 230px;
+        height: 300px;
+    }
+    .product-card{
+        width: 230px;
+        height: 400px;
+    }
 }
