@@ -36,6 +36,8 @@ header {
     height: 8.09vw;
     top: 0;
     z-index: 10;
+    margin: 0;
+    padding: 0;
     background: transparent;
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
@@ -361,14 +363,11 @@ nav ul:last-child {
     color: black;
 }
 
-.trend_products_shop {
-    width: 100%;
-    height: 494.97px;
-}
 
 /* Scroll Buttons ================== */
 .trend_products_wrapper {
     position: relative;
+    padding-left: 5px;
 }
 
 .scroll_btn {
@@ -831,7 +830,7 @@ footer {
     }
     .navigation-link{
     font-size: 3vw;
-}
+    }
     .section1 {
         height: 86.76vw;
         padding-bottom: 0;
@@ -865,6 +864,9 @@ footer {
     }
     .section2{
         margin-top: 6px;
+    }
+    .trend_products_wrapper{
+        padding-left: 2.5px;
     }
     .signature_collection_section{
         background-image: url('images/Mobile_banner_1_x800.webp');

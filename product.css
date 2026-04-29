@@ -4,10 +4,13 @@
 .trend_products_shop {
     display: flex;
     flex-direction: row;
-    gap: 0.75%;
+    gap: 1.1vw;
     padding: 10px 0;
     overflow-x: auto;
     scrollbar-width: none;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 100%;
 }
 
 .trend_products_shop::-webkit-scrollbar {
@@ -19,15 +22,21 @@
 }
 
 .product-card {
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
     color: black;
     display: flex;
     flex-direction: column;
-    width: 23.5vw;
+    min-width: calc((100% - 3 * 0.75%) / 4);
+    flex-shrink: 0;
     cursor: pointer;
-    margin-left: 10px;
-    border: 0.5px solid #8b95c483;
+    border: 1px solid #010c3b28;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
 }
 
 .product-info {
@@ -39,28 +48,28 @@
 
 .stars {
     color: black;
-    font-size: 14px;
+    font-size: 1.03vw;
 }
 
 .reviews-count {
-    font-size: 13px;
+    font-size: 0.96vw;
     color: #555;
 }
 
 .product-name {
-    font-size: 15px;
+    font-size: 1.1vw;
     font-weight: 500;
     margin: 0;
 }
 
 .product-color {
-    font-size: 13px;
+    font-size: 0.96vw;
     color: #555;
     margin: 0;
 }
 
 .product-price {
-    font-size: 15px;
+    font-size: 1.1vw;
     font-weight: 600;
     margin: 0;
 }
@@ -70,9 +79,8 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    aspect-ratio: 1 / 1;
-    height: 23.4vw;
-    border-radius: 8px 8px 0 0;
+    aspect-ratio: 3 / 4;
+    border-radius: 5px 5px 0 0;
 }
 
 .img-main, .img-hover {
@@ -95,6 +103,7 @@
 .product-card:hover .img-main {
     opacity: 0;
 }
+/* ============ */
 
 /* Sizes ========================== */
 .product-sizes {
@@ -118,7 +127,7 @@
 }
 
 .product-sizes span {
-    font-size: 13px;
+    font-size: 0.96vw;
     font-weight: 500;
     cursor: pointer;
 }
@@ -126,19 +135,34 @@
 .product-sizes span:hover {
     text-decoration: underline;
 }
-@media screen and (min-width:700px) and (max-width:1100px) {
-    
+
+/* ================================= */
+/* Tablet (700px - 1100px) ========= */
+/* ================================= */
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+    .product-card {
+        width: calc((100% - 3 * 0.70%) / 3);
+    }
+    .stars { font-size: 1.5vw; }
+    .reviews-count, .product-color, .product-sizes span { font-size: 1.4vw; }
+    .product-name, .product-price { font-size: 1.6vw; }
 }
+
+/* ================================= */
+/* Mobile (max 768px) ============== */
+/* ================================= */
 @media screen and (max-width: 768px) {
     .trend_products_shop {
-        gap: 5px;
+            gap: 2%;
+        /* لا تضيف flex-wrap ولا overflow-x: unset */
     }
-    .product-img-container{
-        width: 230px;
-        height: 300px;
+
+    .product-card {
+ width: calc((100% - 3 * 0.70%) / 2);
     }
-    .product-card{
-        width: 230px;
-        height: 400px;
-    }
+
+    .stars { font-size: 3.5vw; }
+    .reviews-count, .product-color { font-size: 3vw; }
+    .product-name, .product-price { font-size: 3.5vw; }
+    .product-sizes span { font-size: 3vw; }
 }
