@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+:root {
+    --signature-graphics-blanks-height: 35vw;
+    --big-pics-height: 51.47vw;
+    --big-pics-height-for-sm-screen: 103vw;
+    --shop-btn-height-for-sm-screen: 8vw;
+    --shop-btn-width-for-sm-screen: 23vw;
+    --signature-graphics-blanks-height-for-sm-screen: 35vw;
+    --shop-btn-height-for-extra-sm-screen: 11vw;
+    --shop-btn-width-for-extra-sm-screen: 29vw;
+}
+
 @font-face {
     font-family: "intelClear";
     src: url("intel-clear-cufonfonts/IntelClear_Lt.ttf") format("truetype");
@@ -115,17 +126,64 @@ nav {
     gap: 20px;
 }
 
-/* .icon_link1{
-    display: block;
-    background-image: url("icons/bag-fill.svg");
-    background-size: 23px;
+/* الخصائص المشتركة بين الأيقونات الثلاث */
+.icon-person,
+.icon-bag,
+.icon-search {
+    display: inline-block;
+    width: clamp(20px, 1.8vw, 36px);
+    /* تكبر تدريجيًا مع الشاشة */
+    aspect-ratio: 1 / 1;
+    /* تحافظ على النسبة تلقائيًا */
     background-repeat: no-repeat;
-} */
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* أيقونة الشخص */
+.icon-person {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z'/%3E%3C/svg%3E");
+    width: 2.1vw;
+}
+
+/* أيقونة الحقيبة */
+.icon-bag {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z'/%3E%3C/svg%3E");
+    position: relative;
+
+}
+
+#span-icon-bag {
+    position: absolute;
+    top: -0.4em;
+    right: -0.4em;
+    background-color: black;
+    color: white;
+    font-size: 0.8vw;
+    font-weight: bold;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* أيقونة البحث */
+.icon-search {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/%3E%3C/svg%3E");
+}
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 0.7vw;
     padding: 0;
     margin: 0;
 }
@@ -141,6 +199,7 @@ nav ul:last-child {
 .search-icon {
     display: none;
 }
+
 /* ============================================ */
 /* first two section container ================ */
 .sections_container {
@@ -192,7 +251,7 @@ nav ul:last-child {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 400px;
+    width: 100%;
 }
 
 .container_shop h1 {
@@ -314,11 +373,6 @@ nav ul:last-child {
     gap: 0.4%;
 }
 
-:root {
-    --signature-graphics-blanks-height: 35vw;
-    --big-pics-height: 51.47vw;
-}
-
 .signature-link {
     width: 33.2%;
     height: var(--signature-graphics-blanks-height);
@@ -421,7 +475,7 @@ nav ul:last-child {
 }
 
 .signature_title_and_btn {
-    width: 92.5%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -481,12 +535,13 @@ New Arrivals Cards ==============
 ================================= */
 .new_arrivals_wrapper {
     position: relative;
+    padding: 10px 0px;
 }
 
 .new_arrivals_shop {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 1.1vw;
     padding: 10px 0;
     overflow-x: auto;
     scrollbar-width: none;
@@ -548,7 +603,9 @@ Community Reviews ===============
 .review-card {
     display: flex;
     flex-direction: column;
-    min-width: 280px;
+    width: calc((100% - 3 * 15px) / 4);
+    /* 4 cards */
+    flex-shrink: 0;
     cursor: pointer;
     border-radius: 8px;
     border: 1px solid #8b95c483;
@@ -556,7 +613,8 @@ Community Reviews ===============
 
 .review-card img {
     width: 100%;
-    height: 320px;
+    aspect-ratio: 3 / 4;
+    /* بدل height: 320px الثابت */
     object-fit: cover;
     background-color: #f5f5f5;
     border-radius: 8px 8px 0 0;
@@ -573,23 +631,23 @@ Community Reviews ===============
 
 .review-stars {
     color: black;
-    font-size: 14px;
+    font-size: 1vw;
 }
 
 .review-title {
-    font-size: 15px;
+    font-size: 1.1vw;
     font-weight: 600;
     margin: 0;
 }
 
 .review-text {
-    font-size: 13px;
+    font-size: 0.96vw;
     color: #555;
     margin: 0;
 }
 
 .review-name {
-    font-size: 13px;
+    font-size: 0.96vw;
     font-weight: 500;
     margin: 0;
 }
@@ -725,9 +783,133 @@ footer {
 .terms_and_policy a {
     color: white;
 }
+/* ========================================================= */
+/* Large Desktop / Big Screens (min-width: 1200px)           */
+/* ========================================================= */
+@media screen and (min-width: 1600px) {
 
+    nav {
+        padding: 0 4vw; /* Cleaner gaps on ultra-wides */
+        height: 100%;
+    }
 
+    .logo {
+        width: 6.5vw;
+        height: 30px;
+    }
+
+    /* Keeping mixed formats like fixed inputs with scalable dimensions */
+    .logo_and_search > input {
+        width: 25vw; 
+        height: 2.5vw;
+    }
+    .logo_and_search> input::placeholder{
+        font-size: 1.2vw;
+    }
+    .navigation-link {
+        font-size: 1.5vw; /* Responsive link sizing */
+    }
+    
+    .free_shipping_text p {
+        font-size: 1.5vw;
+    }
+
+    /* Icons adapt to not look awkwardly small next to wider gaps */
+    .icon-bag{
+        width: 2.2vw;
+    }
+    .icon-person{
+        width: 2.5vw;
+
+    }
+    #span-icon-bag {
+        font-size: 1vw;
+        width: 1.8em;
+        height: 1.8em;
+    }
+
+    /* ------ 2. Section 1 & Section 2 (Two Men Layout) ONLY Shop Btns & Titles ------ */
+    /* We change the original hardcoded 3rem sizing into responsive scaling via vw */
+
+    .shop_title_and_btn h1 {
+        font-size: 4vw; /* Replacing generic REM so it blows up evenly across screen limits */
+    }
+
+    .shop_btn {
+        font-size: 1.3vw;
+    }
+
+    /* Applying strictly to ONLY the Title and Buttons on the Signature Two Men side too */
+    .signature_title_and_btn h1 {
+        font-size: 4vw;
+    }
+    
+    .signature_btn {
+        font-size: 1.3vw;
+    }
+
+    /* ------ 3. Section Overview Titles like Trend Products & Review Container  ------ */
+    .trend_products_title_and_link h1,
+    .new_arrivals_title_and_link h1,
+    .community_opinions h1 {
+        font-size: 2.6vw; 
+        line-height: 1.2;
+        margin-bottom: 5px; /* Clean gap */
+    }
+
+    /* "View collection" button beside headers smoothly scaled out without editing the parent's actual flex layouts */
+    .trend_products_title_and_link a,
+    .new_arrivals_title_and_link a {
+        font-size: 1.15vw; 
+    }
+}
 @media screen and (min-width:769px) and (max-width:1100px) {
+     * {
+        max-width: 100%;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+    .logo_and_navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        width: 3vw;
+        height: 2.5vw;
+    }
+    /* ===== Header ===== */
+    header {
+        height: auto;           /* بدل 8.09vw الثابت */
+    }
+
+    nav {
+        height: auto;           /* بدل 109.89px الثابت */
+        padding: 10px 15px;     /* تعوض عن الـ height */
+        flex-wrap: nowrap;
+        overflow: hidden;       /* يمنع الـ scrollX */
+    }
+
+    /* ===== Logo ===== */
+    .logo {
+        width: clamp(60px, 7vw, 100px);
+    }
+
+    /* ===== Person Icon ===== */
+    .icon-person {
+    width: clamp(24px, 2.6vw, 30px);
+}
+
+.icon-bag,
+.icon-search {
+    width: clamp(22px, 2.4vw, 28px);
+}
+
+    #span-icon-bag {
+        font-size: 1.2vw;
+    }
     .free_shipping_text {
         display: none;
     }
@@ -735,9 +917,58 @@ footer {
     .free_shipping_text_2 {
         display: block;
     }
+     .shop_title_and_btn h1 {
+        font-size: 4vw; /* Replacing generic REM so it blows up evenly across screen limits */
+    }
+
+    .shop_btn {
+        font-size: 12.5px;
+    }
+    body::before {
+        height: 55.8vw;        /* كان 51.47vw — زدنا لتعويض الـ header */
+    }
+    .section1 {
+        height: calc(54vw - 80px); /* 54vw (body::before) - ارتفاع الـ header التقريبي */
+    }
+    .signature_collection_section {
+        height: 54vw;        /* نفس body::before للتناسق */
+    }
+    .container-link_signature_collection {
+        height: 54vw;        /* بدل 700px الثابت */
+    }
+    /* Applying strictly to ONLY the Title and Buttons on the Signature Two Men side too */
+    .signature_title_and_btn h1 {
+        font-size: 3vw;
+    }
+    
+    .signature_btn {
+        font-size: 1.6vw;
+    }
+
+    .review-card {
+        width: calc((100% - 2 * 15px) / 3);
+    }
+
+    .review-stars {
+        font-size: 1.5vw;
+    }
+
+    .review-title {
+        font-size: 1.6vw;
+    }
+
+    .review-text,
+    .review-name {
+        font-size: 1.4vw;
+    }
 
     .foor-pics {
         width: 100%;
+    }
+
+    .container_shop {
+        position: absolute;
+        bottom: 20px;
     }
 
     .pic_container {
@@ -747,21 +978,38 @@ footer {
         background-size: cover;
         background-position: center;
     }
+    footer {
+        height: auto;
+    }
+
+    .section1_footer {
+        flex-direction: row;
+        flex-wrap: wrap;        /* السطر الثاني للـ links */
+        gap: 30px;
+        height: auto;
+        margin-top: 50px;
+        padding: 0 25px 40px 25px;
+    }
+
+    /* الفورم يأخذ السطر كاملاً */
+    .hours_sing_up {
+        width: 100%;
+    }
+
+    #email_input_footer {
+        width: 60%;
+    }
+
+    /* الـ links تنزل تحت الفورم في صف واحد */
+    .customer_care,
+    .quick_links,
+    .follow_us {
+        flex: 1;                /* توزيع متساوٍ */
+    }
 }
 
-@media screen and (max-width:990px) {
-    .logo_and_search>input {
-        display: none;
-    }
-
+@media screen and (max-width:1000px) {
     .logo_and_navigation ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .logo_and_navigation {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -792,17 +1040,17 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    :root {
-        --big-pics-height-for-sm-screen: 103vw;
-        --shop-btn-height-for-sm-screen: 8vw;
-        --shop-btn-width-for-sm-screen: 23vw;
-        --signature-graphics-blanks-height-for-sm-screen: 35vw;
-    }
 
     header {
         height: 15vw;
     }
-    nav{
+
+    .logo_and_search>input {
+        display: none;
+    }
+
+    nav {
+        height: 15vw;
         margin: 0;
         padding: 0;
         display: flex;
@@ -810,16 +1058,25 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
+
+    .icon-person {
+        width: 23px;
+    }
+
     .search-icon {
         display: block;
     }
+    #span-icon-bag{
+        font-size: 1.7vw;
+    }
 
-    .logo_and_navigation{
+    .logo_and_navigation {
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 5px;
     }
+
     .logo {
         margin: 0;
         width: 15vw;
@@ -828,24 +1085,29 @@ footer {
         background-size: 15vw;
         background-repeat: no-repeat;
     }
-    .navigation-link{
-    font-size: 3vw;
+
+    .navigation-link {
+        font-size: 3vw;
     }
+
     .section1 {
         height: 86.76vw;
         padding-bottom: 0;
         padding-left: 20px;
     }
+
     .go-to-quality-title {
         font-size: 6vw !important;
     }
+
     .shop_btn {
         display: flex;
         align-items: center;
-        font-size: 2.8vw;
+        font-size: 2.26vw;
         height: var(--shop-btn-height-for-sm-screen);
         width: var(--shop-btn-width-for-sm-screen);
     }
+
     body::before {
         content: '';
         position: absolute;
@@ -858,33 +1120,59 @@ footer {
         background-position: center;
         z-index: -1;
     }
-    .div_image h2{
+
+    .div_image h2 {
         /* height: var(--signature-graphics-blanks-height-for-sm-screen); */
         font-size: 3.7vw;
     }
-    .section2{
+
+    .section2 {
         margin-top: 6px;
     }
-    .trend_products_wrapper{
+
+    .trend_products_wrapper {
         padding-left: 2.5px;
     }
-    .signature_collection_section{
+
+    .signature_collection_section {
         background-image: url('images/Mobile_banner_1_x800.webp');
         height: var(--big-pics-height-for-sm-screen);
     }
-    .signature_title_and_btn h1{
+
+    .signature_title_and_btn h1 {
         font-size: 6vw;
     }
+
     .signature_title_and_btn .signature_btn {
-        font-size: 2.8vw;
+        font-size: 2.6vw;
         display: flex;
         align-items: center;
         height: var(--shop-btn-height-for-sm-screen);
         width: var(--shop-btn-width-for-sm-screen);
     }
-    .left_btn, .right_btn, .new_right_btn, .new_left_btn, .community_left_btn, .community_right_btn {
+
+    .left_btn,.right_btn,.new_right_btn,.new_left_btn,.community_left_btn,.community_right_btn {
         display: none;
     }
+
+    .review-card {
+        min-width: calc((100% - 15px) / 2);
+        /* 2 cards */
+    }
+
+    .review-stars {
+        font-size: 3.5vw;
+    }
+
+    .review-title {
+        font-size: 3.5vw;
+    }
+
+    .review-text,
+    .review-name {
+        font-size: 3vw;
+    }
+
     footer {
         height: 1350px;
         display: flex;
@@ -895,6 +1183,8 @@ footer {
     .section1_footer {
         display: flex;
         flex-direction: column;
+        padding-left: 1vw !important;
+        padding-right: 1vw !important;
     }
 
     .terms_and_policy {
@@ -902,8 +1192,86 @@ footer {
         padding-top: 30px;
         padding-right: 30px;
     }
+}
+/* موبايل كبير (500px - 768px) */
+@media screen and (min-width: 500px) and (max-width: 768px) {
+    .icon-person {
+        width: clamp(26px, 3.5vw, 32px);
+    }
+    .icon-bag,
+    .icon-search {
+        width: clamp(24px, 3.2vw, 30px);
+    }
+    #span-icon-bag {
+        font-size: 1.5vw;
+    }
+}
+@media screen and (max-width: 400px) {
+    #span-icon-bag{
+        font-size: 2.5vw;
+    }
+    .free_shipping_text_2 {
+        width: 300px;
+    }
+
+    .free_shipping_text_2_paragraph {
+        font-size: 12.5px;
+    }
+    /* Trending Title */
+    .trend_products_title_and_link {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .trend_products_title_and_link h1 {
+        font-size: 5vw;
+    }
+
+    .trend_products_title_and_link a {
+        font-size: 3.5vw;
+    }
+
+    /* New Arrivals Title */
+    .new_arrivals_title_and_link {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    .new_arrivals_title_and_link h1 {
+        font-size: 5vw;
+    }
+
+    .new_arrivals_title_and_link a {
+        font-size: 3.5vw;
+    }
+
+    /* Community Title */
+    .community_opinions h1 {
+        font-size: 5vw;
+    }
+
+    .community_opinions a {
+        font-size: 3.5vw;
+    }
+    .shop_btn {
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
+        height: var(--shop-btn-height-for-extra-sm-screen);
+        width: var(--shop-btn-width-for-extra-sm-screen);
+    }
+    .signature_btn{
+        display: flex;
+        align-items: center;
+        font-size: 3vw;
+        height: var(--shop-btn-height-for-extra-sm-screen);
+        width: var(--shop-btn-width-for-extra-sm-screen);
+    }
+    .copy_right {
+        font-size: 3vw;
+    }
 
     .terms_and_policy a {
-        font-size: small;
+        font-size: 3vw;
     }
 }

@@ -6,7 +6,9 @@ window.addEventListener('scroll', () => {
         header.classList.remove('scrolled');
     }
 })
-
+// bag icon count==========
+var count=0
+document.getElementById("span-icon-bag").innerHTML=count
 // ========================
 // trend products
 // ========================
