@@ -153,12 +153,11 @@
 /* ================================= */
 @media screen and (max-width: 768px) {
     .trend_products_shop {
-            gap: 2%;
-        /* لا تضيف flex-wrap ولا overflow-x: unset */
+            gap: 1.1vw;
     }
 
     .product-card {
- width: calc((100% - 3 * 1.1vw) / 2);
+ min-width: calc((100% - 1 * 1.1vw) / 2);
     }
 
     .stars { font-size: 3.5vw; }

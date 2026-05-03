@@ -11,9 +11,8 @@
     --big-pics-height-for-sm-screen: 103vw;
     --shop-btn-height-for-sm-screen: 8vw;
     --shop-btn-width-for-sm-screen: 23vw;
-    --signature-graphics-blanks-height-for-sm-screen: 35vw;
-    --shop-btn-height-for-extra-sm-screen: 11vw;
-    --shop-btn-width-for-extra-sm-screen: 29vw;
+    --shop-btn-height-for-extra-sm-screen: 9vw;
+    --shop-btn-width-for-extra-sm-screen: fit-content;
 }
 
 @font-face {
@@ -84,7 +83,7 @@ nav {
 
 .logo {
     width: 5.15vw;
-    height: auto;
+    height: 1.1vw;
     background-image: url("images/hours-logo-july22_8af1c18e-780b-4177-834f-4596b1edbda5_small@2x.png");
     background-size: cover;
     background-position: center;
@@ -125,7 +124,6 @@ nav {
     align-items: center;
     gap: 20px;
 }
-
 /* الخصائص المشتركة بين الأيقونات الثلاث */
 .icon-person,
 .icon-bag,
@@ -421,7 +419,8 @@ nav ul:last-child {
 /* Scroll Buttons ================== */
 .trend_products_wrapper {
     position: relative;
-    padding-left: 5px;
+    position: relative;
+    padding: 10px 5px;    /* أضف padding-bottom مثل new_arrivals_wrapper */
 }
 
 .scroll_btn {
@@ -466,9 +465,9 @@ nav ul:last-child {
 }
 
 .container-link_signature_collection {
-    width: 100%;
-    height: 700px;
     position: absolute;
+    width: 100%;
+    height: 100%;    /* بدل 700px الثابت */
     display: flex;
     align-items: end;
     justify-content: center;
@@ -479,6 +478,7 @@ nav ul:last-child {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
 }
 
 .signature_title_and_btn h1 {
@@ -492,7 +492,8 @@ nav ul:last-child {
     color: white;
     border: 1px solid white;
     padding: 12px 24px;
-    width: fit-content;
+    /* width: fit-content; */
+    white-space: nowrap;
     cursor: pointer;
     text-decoration: none;
 }
@@ -578,7 +579,7 @@ Community Reviews ===============
 .community_reviews_content {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 1.1vw;
     padding: 10px 0;
     overflow-x: auto;
     scrollbar-width: none;
@@ -603,12 +604,12 @@ Community Reviews ===============
 .review-card {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 3 * 15px) / 4);
+    width: calc((100% - 3 * 1.1vw) / 4);
     /* 4 cards */
     flex-shrink: 0;
     cursor: pointer;
-    border-radius: 8px;
-    border: 1px solid #8b95c483;
+    border-radius: 5px;
+    border: 1px solid #010c3b28;
 }
 
 .review-card img {
@@ -617,7 +618,7 @@ Community Reviews ===============
     /* بدل height: 320px الثابت */
     object-fit: cover;
     background-color: #f5f5f5;
-    border-radius: 8px 8px 0 0;
+    border-radius: 5px 5px 0 0;
     border: 0.5px solid #8b95c43b;
 }
 
@@ -786,7 +787,7 @@ footer {
 /* ========================================================= */
 /* Large Desktop / Big Screens (min-width: 1200px)           */
 /* ========================================================= */
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1500px) {
 
     nav {
         padding: 0 4vw; /* Cleaner gaps on ultra-wides */
@@ -794,8 +795,8 @@ footer {
     }
 
     .logo {
-        width: 6.5vw;
-        height: 30px;
+        width: 5vw;
+        height: 20px;
     }
 
     /* Keeping mixed formats like fixed inputs with scalable dimensions */
@@ -862,6 +863,70 @@ footer {
     .new_arrivals_title_and_link a {
         font-size: 1.15vw; 
     }
+    /* ===== Footer ===== */
+    .section1_footer {
+        height: auto;
+        min-height: 18vw;           /* بدل 300px الثابت */
+        gap: 5vw;                   /* بدل 70px الثابت */
+        margin-top: 5vw;            /* بدل 80px الثابت */
+        padding-left: 3vw;          /* بدل 25px الثابت */
+        padding-bottom: 3vw;
+    }
+    .hours_sing_up img {
+    height: 1.8vw !important;    /* بدل 25.5px الثابت */
+    width: auto !important;       /* بدل 90px الثابت */
+}
+
+/* ===== Paragraph ===== */
+.hours_sing_up > p:first-of-type {
+    font-size: 1.2vw;
+    line-height: 1.6;
+}
+
+/* ===== Social Media Icons ===== */
+.follow_us svg {
+    width: 1.2vw;
+    height: 1.2vw;
+}
+
+.follow_us a {
+    gap: 0.5vw;
+}
+
+    #email_input_footer {
+        width: 25vw;                /* بدل 319px الثابت */
+        height: 3vw;                /* بدل 48px الثابت */
+        font-size: 1vw;
+    }
+
+    #email_submit_footer {
+        width: 7vw;                 /* بدل 115px الثابت */
+        height: 3vw;                /* بدل 48px الثابت */
+        font-size: 1.2vw;
+    }
+
+    .links_titles {
+        font-size: 1.2vw;
+    }
+
+    .privacy_policy_paragraph,
+    .section1_footer a {
+        font-size: 1.2vw;
+    }
+
+    .copy_right,
+    .terms_and_policy a {
+        font-size: 1.13vw;
+    }
+
+    .copy_right {
+        padding: 1.5vw;
+    }
+
+    .terms_and_policy {
+        padding: 1.5vw;
+        gap: 1.5vw;
+    }
 }
 @media screen and (min-width:769px) and (max-width:1100px) {
      * {
@@ -875,10 +940,6 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    .logo{
-        width: 3vw;
-        height: 2.5vw;
     }
     /* ===== Header ===== */
     header {
@@ -894,8 +955,15 @@ footer {
 
     /* ===== Logo ===== */
     .logo {
-        width: clamp(60px, 7vw, 100px);
-    }
+    width: clamp(60px, 7vw, 100px);
+    height: clamp(15px, 1.8vw, 25px);    /* ← أضف height مناسب */
+    background-size: contain;             /* ← بدل cover حتى لا يُقطع */
+    background-repeat: no-repeat;
+}
+    .icons_list{
+    display: flex;
+    gap: 1vw;
+}
 
     /* ===== Person Icon ===== */
     .icon-person {
@@ -946,7 +1014,7 @@ footer {
     }
 
     .review-card {
-        width: calc((100% - 2 * 15px) / 3);
+        width: calc((100% - 2 * 1.1vw) / 3);
     }
 
     .review-stars {
@@ -1015,7 +1083,6 @@ footer {
         align-items: center;
         gap: 20px;
     }
-
     .foor-pics {
         flex-wrap: wrap;
         gap: 10px;
@@ -1058,7 +1125,10 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
-
+    .icons_list{
+    display: flex;
+    gap: 1.8vw;
+}
     .icon-person {
         width: 23px;
     }
@@ -1079,15 +1149,15 @@ footer {
 
     .logo {
         margin: 0;
-        width: 15vw;
-        height: 2.7vw;
+        width: clamp(60px, 9.2vw, 85px);    /* بدل 15vw الثابت */
+        height: clamp(12px, 2vw, 18px);
         background-image: url(images/hours-logo-july22_8af1c18e-780b-4177-834f-4596b1edbda5_small@2x.png);
-        background-size: 15vw;
+        background-size: clamp(60px, 10vw, 85px);
         background-repeat: no-repeat;
     }
 
     .navigation-link {
-        font-size: 3vw;
+        font-size: clamp(10px, 3vw, 14px);
     }
 
     .section1 {
@@ -1101,11 +1171,13 @@ footer {
     }
 
     .shop_btn {
-        display: flex;
-        align-items: center;
-        font-size: 2.26vw;
-        height: var(--shop-btn-height-for-sm-screen);
-        width: var(--shop-btn-width-for-sm-screen);
+        display: inline-flex;              /* بدل flex */
+    align-items: center;
+    font-size: 2.6vw;
+    height: var(--shop-btn-height-for-sm-screen);
+    width: fit-content;                /* بدل var() الثابت */
+    padding: 0 4vw;                    /* تعوض عن الـ width */
+    white-space: nowrap;
     }
 
     body::before {
@@ -1144,19 +1216,20 @@ footer {
     }
 
     .signature_title_and_btn .signature_btn {
-        font-size: 2.6vw;
-        display: flex;
-        align-items: center;
-        height: var(--shop-btn-height-for-sm-screen);
-        width: var(--shop-btn-width-for-sm-screen);
+        display: inline-flex;              /* بدل flex */
+    align-items: center;
+    font-size: 2.6vw;
+    height: var(--shop-btn-height-for-sm-screen);
+    width: fit-content;                /* بدل var() الثابت */
+    padding: 0 4vw;
+    white-space: nowrap;
     }
-
     .left_btn,.right_btn,.new_right_btn,.new_left_btn,.community_left_btn,.community_right_btn {
         display: none;
     }
 
     .review-card {
-        min-width: calc((100% - 15px) / 2);
+        min-width: calc((100% - 1.1vw) / 2);
         /* 2 cards */
     }
 
@@ -1230,7 +1303,6 @@ footer {
     .trend_products_title_and_link a {
         font-size: 3.5vw;
     }
-
     /* New Arrivals Title */
     .new_arrivals_title_and_link {
         height: auto;
@@ -1253,19 +1325,15 @@ footer {
     .community_opinions a {
         font-size: 3.5vw;
     }
-    .shop_btn {
-        display: flex;
+    .shop_btn,
+    .signature_title_and_btn .signature_btn {
+        display: inline-flex;
         align-items: center;
         font-size: 3vw;
         height: var(--shop-btn-height-for-extra-sm-screen);
-        width: var(--shop-btn-width-for-extra-sm-screen);
-    }
-    .signature_btn{
-        display: flex;
-        align-items: center;
-        font-size: 3vw;
-        height: var(--shop-btn-height-for-extra-sm-screen);
-        width: var(--shop-btn-width-for-extra-sm-screen);
+        width: fit-content;
+        padding: 0 5vw;
+        white-space: nowrap;
     }
     .copy_right {
         font-size: 3vw;
