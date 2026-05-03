@@ -124,6 +124,7 @@ nav {
     align-items: center;
     gap: 20px;
 }
+
 /* الخصائص المشتركة بين الأيقونات الثلاث */
 .icon-person,
 .icon-bag,
@@ -420,7 +421,8 @@ nav ul:last-child {
 .trend_products_wrapper {
     position: relative;
     position: relative;
-    padding: 10px 5px;    /* أضف padding-bottom مثل new_arrivals_wrapper */
+    padding: 10px 5px;
+    /* أضف padding-bottom مثل new_arrivals_wrapper */
 }
 
 .scroll_btn {
@@ -467,7 +469,8 @@ nav ul:last-child {
 .container-link_signature_collection {
     position: absolute;
     width: 100%;
-    height: 100%;    /* بدل 700px الثابت */
+    height: 100%;
+    /* بدل 700px الثابت */
     display: flex;
     align-items: end;
     justify-content: center;
@@ -784,13 +787,15 @@ footer {
 .terms_and_policy a {
     color: white;
 }
+
 /* ========================================================= */
 /* Large Desktop / Big Screens (min-width: 1200px)           */
 /* ========================================================= */
 @media screen and (min-width: 1500px) {
 
     nav {
-        padding: 0 4vw; /* Cleaner gaps on ultra-wides */
+        padding: 0 4vw;
+        /* Cleaner gaps on ultra-wides */
         height: 100%;
     }
 
@@ -800,29 +805,34 @@ footer {
     }
 
     /* Keeping mixed formats like fixed inputs with scalable dimensions */
-    .logo_and_search > input {
-        width: 25vw; 
+    .logo_and_search>input {
+        width: 25vw;
         height: 2.5vw;
     }
-    .logo_and_search> input::placeholder{
+
+    .logo_and_search>input::placeholder {
         font-size: 1.2vw;
     }
+
     .navigation-link {
-        font-size: 1.5vw; /* Responsive link sizing */
+        font-size: 1.5vw;
+        /* Responsive link sizing */
     }
-    
+
     .free_shipping_text p {
         font-size: 1.5vw;
     }
 
     /* Icons adapt to not look awkwardly small next to wider gaps */
-    .icon-bag{
+    .icon-bag {
         width: 2.2vw;
     }
-    .icon-person{
+
+    .icon-person {
         width: 2.5vw;
 
     }
+
     #span-icon-bag {
         font-size: 1vw;
         width: 1.8em;
@@ -833,7 +843,8 @@ footer {
     /* We change the original hardcoded 3rem sizing into responsive scaling via vw */
 
     .shop_title_and_btn h1 {
-        font-size: 4vw; /* Replacing generic REM so it blows up evenly across screen limits */
+        font-size: 4vw;
+        /* Replacing generic REM so it blows up evenly across screen limits */
     }
 
     .shop_btn {
@@ -844,7 +855,7 @@ footer {
     .signature_title_and_btn h1 {
         font-size: 4vw;
     }
-    
+
     .signature_btn {
         font-size: 1.3vw;
     }
@@ -853,55 +864,68 @@ footer {
     .trend_products_title_and_link h1,
     .new_arrivals_title_and_link h1,
     .community_opinions h1 {
-        font-size: 2.6vw; 
+        font-size: 2.6vw;
         line-height: 1.2;
-        margin-bottom: 5px; /* Clean gap */
+        margin-bottom: 5px;
+        /* Clean gap */
     }
 
     /* "View collection" button beside headers smoothly scaled out without editing the parent's actual flex layouts */
     .trend_products_title_and_link a,
     .new_arrivals_title_and_link a {
-        font-size: 1.15vw; 
+        font-size: 1.15vw;
     }
+
     /* ===== Footer ===== */
     .section1_footer {
         height: auto;
-        min-height: 18vw;           /* بدل 300px الثابت */
-        gap: 5vw;                   /* بدل 70px الثابت */
-        margin-top: 5vw;            /* بدل 80px الثابت */
-        padding-left: 3vw;          /* بدل 25px الثابت */
+        min-height: 18vw;
+        /* بدل 300px الثابت */
+        gap: 5vw;
+        /* بدل 70px الثابت */
+        margin-top: 5vw;
+        /* بدل 80px الثابت */
+        padding-left: 3vw;
+        /* بدل 25px الثابت */
         padding-bottom: 3vw;
     }
+
     .hours_sing_up img {
-    height: 1.8vw !important;    /* بدل 25.5px الثابت */
-    width: auto !important;       /* بدل 90px الثابت */
-}
+        height: 1.8vw !important;
+        /* بدل 25.5px الثابت */
+        width: auto !important;
+        /* بدل 90px الثابت */
+    }
 
-/* ===== Paragraph ===== */
-.hours_sing_up > p:first-of-type {
-    font-size: 1.2vw;
-    line-height: 1.6;
-}
+    /* ===== Paragraph ===== */
+    .hours_sing_up>p:first-of-type {
+        font-size: 1.2vw;
+        line-height: 1.6;
+    }
 
-/* ===== Social Media Icons ===== */
-.follow_us svg {
-    width: 1.2vw;
-    height: 1.2vw;
-}
+    /* ===== Social Media Icons ===== */
+    .follow_us svg {
+        width: 1.2vw;
+        height: 1.2vw;
+    }
 
-.follow_us a {
-    gap: 0.5vw;
-}
+    .follow_us a {
+        gap: 0.5vw;
+    }
 
     #email_input_footer {
-        width: 25vw;                /* بدل 319px الثابت */
-        height: 3vw;                /* بدل 48px الثابت */
+        width: 25vw;
+        /* بدل 319px الثابت */
+        height: 3vw;
+        /* بدل 48px الثابت */
         font-size: 1vw;
     }
 
     #email_submit_footer {
-        width: 7vw;                 /* بدل 115px الثابت */
-        height: 3vw;                /* بدل 48px الثابت */
+        width: 7vw;
+        /* بدل 115px الثابت */
+        height: 3vw;
+        /* بدل 48px الثابت */
         font-size: 1.2vw;
     }
 
@@ -928,56 +952,68 @@ footer {
         gap: 1.5vw;
     }
 }
+
 @media screen and (min-width:769px) and (max-width:1100px) {
-     * {
+    * {
         max-width: 100%;
     }
 
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
     }
+
     .logo_and_navigation {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     /* ===== Header ===== */
     header {
-        height: auto;           /* بدل 8.09vw الثابت */
+        height: auto;
+        /* بدل 8.09vw الثابت */
     }
 
     nav {
-        height: auto;           /* بدل 109.89px الثابت */
-        padding: 10px 15px;     /* تعوض عن الـ height */
+        height: auto;
+        /* بدل 109.89px الثابت */
+        padding: 10px 15px;
+        /* تعوض عن الـ height */
         flex-wrap: nowrap;
-        overflow: hidden;       /* يمنع الـ scrollX */
+        overflow: hidden;
+        /* يمنع الـ scrollX */
     }
 
     /* ===== Logo ===== */
     .logo {
-    width: clamp(60px, 7vw, 100px);
-    height: clamp(15px, 1.8vw, 25px);    /* ← أضف height مناسب */
-    background-size: contain;             /* ← بدل cover حتى لا يُقطع */
-    background-repeat: no-repeat;
-}
-    .icons_list{
-    display: flex;
-    gap: 1vw;
-}
+        width: clamp(60px, 7vw, 100px);
+        height: clamp(15px, 1.8vw, 25px);
+        /* ← أضف height مناسب */
+        background-size: contain;
+        /* ← بدل cover حتى لا يُقطع */
+        background-repeat: no-repeat;
+    }
+
+    .icons_list {
+        display: flex;
+        gap: 1vw;
+    }
 
     /* ===== Person Icon ===== */
     .icon-person {
-    width: clamp(24px, 2.6vw, 30px);
-}
+        width: clamp(24px, 2.6vw, 30px);
+    }
 
-.icon-bag,
-.icon-search {
-    width: clamp(22px, 2.4vw, 28px);
-}
+    .icon-bag,
+    .icon-search {
+        width: clamp(22px, 2.4vw, 28px);
+    }
 
     #span-icon-bag {
         font-size: 1.2vw;
     }
+
     .free_shipping_text {
         display: none;
     }
@@ -985,30 +1021,41 @@ footer {
     .free_shipping_text_2 {
         display: block;
     }
-     .shop_title_and_btn h1 {
-        font-size: 4vw; /* Replacing generic REM so it blows up evenly across screen limits */
+
+    .shop_title_and_btn h1 {
+        font-size: 4vw;
+        /* Replacing generic REM so it blows up evenly across screen limits */
     }
 
     .shop_btn {
         font-size: 12.5px;
     }
+
     body::before {
-        height: 55.8vw;        /* كان 51.47vw — زدنا لتعويض الـ header */
+        height: 55.8vw;
+        /* كان 51.47vw — زدنا لتعويض الـ header */
     }
+
     .section1 {
-        height: calc(54vw - 80px); /* 54vw (body::before) - ارتفاع الـ header التقريبي */
+        height: calc(54vw - 80px);
+        /* 54vw (body::before) - ارتفاع الـ header التقريبي */
     }
+
     .signature_collection_section {
-        height: 54vw;        /* نفس body::before للتناسق */
+        height: 54vw;
+        /* نفس body::before للتناسق */
     }
+
     .container-link_signature_collection {
-        height: 54vw;        /* بدل 700px الثابت */
+        height: 54vw;
+        /* بدل 700px الثابت */
     }
+
     /* Applying strictly to ONLY the Title and Buttons on the Signature Two Men side too */
     .signature_title_and_btn h1 {
         font-size: 3vw;
     }
-    
+
     .signature_btn {
         font-size: 1.6vw;
     }
@@ -1046,13 +1093,15 @@ footer {
         background-size: cover;
         background-position: center;
     }
+
     footer {
         height: auto;
     }
 
     .section1_footer {
         flex-direction: row;
-        flex-wrap: wrap;        /* السطر الثاني للـ links */
+        flex-wrap: wrap;
+        /* السطر الثاني للـ links */
         gap: 30px;
         height: auto;
         margin-top: 50px;
@@ -1072,7 +1121,8 @@ footer {
     .customer_care,
     .quick_links,
     .follow_us {
-        flex: 1;                /* توزيع متساوٍ */
+        flex: 1;
+        /* توزيع متساوٍ */
     }
 }
 
@@ -1083,6 +1133,7 @@ footer {
         align-items: center;
         gap: 20px;
     }
+
     .foor-pics {
         flex-wrap: wrap;
         gap: 10px;
@@ -1125,10 +1176,12 @@ footer {
         justify-content: space-between;
         align-items: center;
     }
-    .icons_list{
-    display: flex;
-    gap: 1.8vw;
-}
+
+    .icons_list {
+        display: flex;
+        gap: 1.8vw;
+    }
+
     .icon-person {
         width: 23px;
     }
@@ -1136,7 +1189,8 @@ footer {
     .search-icon {
         display: block;
     }
-    #span-icon-bag{
+
+    #span-icon-bag {
         font-size: 1.7vw;
     }
 
@@ -1149,7 +1203,8 @@ footer {
 
     .logo {
         margin: 0;
-        width: clamp(60px, 9.2vw, 85px);    /* بدل 15vw الثابت */
+        width: clamp(60px, 9.2vw, 85px);
+        /* بدل 15vw الثابت */
         height: clamp(12px, 2vw, 18px);
         background-image: url(images/hours-logo-july22_8af1c18e-780b-4177-834f-4596b1edbda5_small@2x.png);
         background-size: clamp(60px, 10vw, 85px);
@@ -1171,13 +1226,16 @@ footer {
     }
 
     .shop_btn {
-        display: inline-flex;              /* بدل flex */
-    align-items: center;
-    font-size: 2.6vw;
-    height: var(--shop-btn-height-for-sm-screen);
-    width: fit-content;                /* بدل var() الثابت */
-    padding: 0 4vw;                    /* تعوض عن الـ width */
-    white-space: nowrap;
+        display: inline-flex;
+        /* بدل flex */
+        align-items: center;
+        font-size: 2.6vw;
+        height: var(--shop-btn-height-for-sm-screen);
+        width: fit-content;
+        /* بدل var() الثابت */
+        padding: 0 4vw;
+        /* تعوض عن الـ width */
+        white-space: nowrap;
     }
 
     body::before {
@@ -1216,15 +1274,23 @@ footer {
     }
 
     .signature_title_and_btn .signature_btn {
-        display: inline-flex;              /* بدل flex */
-    align-items: center;
-    font-size: 2.6vw;
-    height: var(--shop-btn-height-for-sm-screen);
-    width: fit-content;                /* بدل var() الثابت */
-    padding: 0 4vw;
-    white-space: nowrap;
+        display: inline-flex;
+        /* بدل flex */
+        align-items: center;
+        font-size: 2.6vw;
+        height: var(--shop-btn-height-for-sm-screen);
+        width: fit-content;
+        /* بدل var() الثابت */
+        padding: 0 4vw;
+        white-space: nowrap;
     }
-    .left_btn,.right_btn,.new_right_btn,.new_left_btn,.community_left_btn,.community_right_btn {
+
+    .left_btn,
+    .right_btn,
+    .new_right_btn,
+    .new_left_btn,
+    .community_left_btn,
+    .community_right_btn {
         display: none;
     }
 
@@ -1266,23 +1332,28 @@ footer {
         padding-right: 30px;
     }
 }
+
 /* موبايل كبير (500px - 768px) */
 @media screen and (min-width: 500px) and (max-width: 768px) {
     .icon-person {
         width: clamp(26px, 3.5vw, 32px);
     }
+
     .icon-bag,
     .icon-search {
         width: clamp(24px, 3.2vw, 30px);
     }
+
     #span-icon-bag {
         font-size: 1.5vw;
     }
 }
+
 @media screen and (max-width: 400px) {
-    #span-icon-bag{
+    #span-icon-bag {
         font-size: 2.5vw;
     }
+
     .free_shipping_text_2 {
         width: 300px;
     }
@@ -1290,6 +1361,10 @@ footer {
     .free_shipping_text_2_paragraph {
         font-size: 12.5px;
     }
+    .section2{
+        margin-top: 2px !important;
+    }
+
     /* Trending Title */
     .trend_products_title_and_link {
         height: auto;
@@ -1303,6 +1378,7 @@ footer {
     .trend_products_title_and_link a {
         font-size: 3.5vw;
     }
+
     /* New Arrivals Title */
     .new_arrivals_title_and_link {
         height: auto;
@@ -1325,6 +1401,7 @@ footer {
     .community_opinions a {
         font-size: 3.5vw;
     }
+
     .shop_btn,
     .signature_title_and_btn .signature_btn {
         display: inline-flex;
@@ -1335,6 +1412,7 @@ footer {
         padding: 0 5vw;
         white-space: nowrap;
     }
+
     .copy_right {
         font-size: 3vw;
     }
